@@ -124,7 +124,7 @@ function pointToHex(p) {
 
 function pad(n, s) {
     let res = n+"";
-    while (res.length < s) res = "0" + res;
+    while (res.length < s) res = res + "0";
     return res;
 }
 
