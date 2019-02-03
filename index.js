@@ -122,13 +122,13 @@ function pointToHex(p) {
   return elliptic.utils.toHex(ed25519.encodePoint(p, 'hex'));
 }
 
-function pad(n, s) = {
+function pad(n, s) {
     let res = n+"";
     while (res.length < s) res = "0" + res;
     return res;
 }
 
-function swapEndianess(n) = {    
+function swapEndianess(n) {    
     let ns = n.toString(16)                 // translate to hexadecimal notation
     ns = ns.replace(/^(.(..)*)$/, "0$1");   // add a leading zero if needed    
     let arr = ns.match(/../g);              // split number in groups of two
